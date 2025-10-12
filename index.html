@@ -32,6 +32,15 @@
     nav h1 {
       font-size: 1.5rem;
       letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav h1 img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
     }
 
     nav ul {
@@ -51,14 +60,18 @@
       opacity: 0.8;
     }
 
-   .hero {
-  background: url('https://images.unsplash.com/photo-1600195077075-7c397b2f5aaf?auto=format&fit=crop&w=1600&q=80')
-    center/cover no-repeat;
-  color: white;
-  padding: 120px 20px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
-}
-
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: url('https://images.unsplash.com/photo-1600195077075-7c397b2f5aaf?auto=format&fit=crop&w=1600&q=80')
+        center/cover no-repeat;
+      color: white;
+      padding: 120px 20px;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
 
     .hero h2 {
       font-size: 2.5rem;
@@ -107,6 +120,12 @@
 
     .feature-card:hover {
       transform: translateY(-5px);
+    }
+
+    .feature-card img {
+      width: 70px;
+      height: 70px;
+      margin-bottom: 15px;
     }
 
     .feature-card h3 {
@@ -191,7 +210,10 @@
 
 <body>
   <nav>
-    <h1>Teaching Tools</h1>
+    <h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="Logo" />
+      Teaching Tools
+    </h1>
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#features">Features</a></li>
@@ -207,16 +229,19 @@
 
   <section id="features" class="features">
     <div class="feature-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Smart Comments Icon">
       <h3>Smart Comments</h3>
       <p>Instantly generate personalized student comments that save hours of grading time.</p>
     </div>
 
     <div class="feature-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Custom Tests Icon">
       <h3>Custom Tests</h3>
       <p>Create phonics and grammar tests tailored to each student's learning level.</p>
     </div>
 
     <div class="feature-card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Reports Icon">
       <h3>Reports & Feedback</h3>
       <p>Generate detailed reports and meaningful feedback for parents and students.</p>
     </div>
