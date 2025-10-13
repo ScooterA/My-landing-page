@@ -131,6 +131,49 @@
       margin-bottom: 10px;
     }
 
+    /* New download section */
+    #download {
+      background: #ffffff;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    #download h2 {
+      color: #2e7d32;
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
+
+    #download p {
+      max-width: 650px;
+      margin: 0 auto 30px;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    #download button {
+      background: linear-gradient(135deg, #4db6ac, #81c784);
+      color: white;
+      border: none;
+      padding: 14px 40px;
+      border-radius: 25px;
+      font-weight: bold;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    #download button:hover {
+      background: #2e7d32;
+    }
+
+    #download small {
+      display: block;
+      margin-top: 20px;
+      font-size: 0.95rem;
+      color: #777;
+    }
+
     .subscribe {
       text-align: center;
       background: linear-gradient(135deg, #4db6ac, #81c784);
@@ -212,6 +255,7 @@
     <ul>
       <li><a href="#">Home</a></li>
       <li><a href="#features">Features</a></li>
+      <li><a href="#download">Download</a></li>
       <li><a href="#subscribe">Subscribe</a></li>
     </ul>
   </nav>
@@ -219,7 +263,7 @@
   <section class="hero">
     <h2>Empowering Teachers Everywhere</h2>
     <p>Create smart comments, generate reports, and design tests effortlessly — all in one place.</p>
-    <a href="#" class="btn">Try the Comment Generator</a>
+    <a href="#download" class="btn">Try the Comment Generator</a>
   </section>
 
   <section id="features" class="features">
@@ -240,6 +284,21 @@
       <h3>Reports & Feedback</h3>
       <p>Generate detailed reports and meaningful feedback for parents and students.</p>
     </div>
+  </section>
+
+  <!-- New Download Section -->
+  <section id="download">
+    <h2>Download the ESL Comment Generator</h2>
+    <p>
+      Get the latest <strong>ESL Comment Generator Pro</strong> for Windows.  
+      No installation needed — just download and open the file.
+    </p>
+    <a href="https://github.com/ScottJeffery/esl-comment-generator/raw/main/ESL_Comment_Generator_Pro.exe" download>
+      <button>⬇️ Download for Windows</button>
+    </a>
+    <small>
+      ⚠️ Windows only. If you see a SmartScreen warning, click <em>“More Info → Run Anyway”</em>.
+    </small>
   </section>
 
   <section id="subscribe" class="subscribe">
