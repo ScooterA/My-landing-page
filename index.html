@@ -6,167 +6,180 @@
   <title>Teaching Tools</title>
   <meta name="description" content="Simple ESL teaching tools — Lite, Pro, and Teacher editions." />
   <style>
-    :root{
-      --purple:#5E35B1;
-      --blue:#03A9F4;
-      --ink:#1f2937;
-      --muted:#6b7280;
-      --card:#ffffff;
-      --bg:#f6f8ff;
-      --locked:#cfd6e4;
-      --ring:rgba(3,169,244,.35);
+    :root {
+      --purple: #5E35B1;
+      --blue: #03A9F4;
+      --ink: #1f2937;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --bg: #f6f8ff;
+      --locked: #cfd6e4;
+      --ring: rgba(3,169,244,.35);
     }
-    *{box-sizing:border-box;margin:0;padding:0}
-    html,body{height:100%}
-    body{
-      font:16px/1.5 "Poppins",Arial,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
-      color:var(--ink);
-      background:linear-gradient(180deg,#f9fbff 0%, #eef4ff 55%, #eaf2ff 100%);
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { height: 100%; }
+
+    body {
+      font: 16px/1.5 "Poppins", Arial, system-ui, sans-serif;
+      color: var(--ink);
+      background: linear-gradient(180deg,#f9fbff 0%,#eef4ff 55%,#eaf2ff 100%);
     }
 
     /* NAV */
-    .nav{
-      position:sticky;top:0;z-index:50;
-      background:rgba(255,255,255,.85);
-      backdrop-filter:saturate(140%) blur(8px);
-      border-bottom:1px solid #e7ecf7;
+    .nav {
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(255,255,255,.85);
+      backdrop-filter: saturate(140%) blur(8px);
+      border-bottom: 1px solid #e7ecf7;
     }
-    .wrap{max-width:1100px;margin:0 auto;padding:0 20px}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .brand{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--purple);letter-spacing:.3px}
-    .brand-icon{
-      width:28px;height:28px;border-radius:8px;
-      background:linear-gradient(135deg,var(--purple),var(--blue));
-      display:inline-block;
+
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; color: var(--purple); }
+    .brand-icon {
+      width: 28px; height: 28px; border-radius: 8px;
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      display: inline-block;
     }
-    .nav a{
-      color:var(--ink);text-decoration:none;font-weight:600;margin-left:20px
+
+    .nav a {
+      color: var(--ink); text-decoration: none; font-weight: 600; margin-left: 20px;
     }
-    .nav a:hover{color:var(--purple)}
+    .nav a:hover { color: var(--purple); }
 
     /* HERO */
-    .hero{
-      position:relative;overflow:hidden;
-      background:
-        radial-gradient(1400px 500px at 75% -10%, rgba(94,53,177,.35), transparent 60%),
-        radial-gradient(1000px 400px at 0% 0%, rgba(3,169,244,.28), transparent 60%);
-      color:#0b0b0b;
+    .hero {
+      position: relative; overflow: hidden;
+      background: radial-gradient(1400px 500px at 75% -10%, rgba(94,53,177,.35), transparent 60%),
+                  radial-gradient(1000px 400px at 0% 0%, rgba(3,169,244,.28), transparent 60%);
+      color: #0b0b0b;
     }
-    .hero-inner{
-      display:grid;grid-template-columns:1.1fr .9fr;gap:28px;
-      align-items:center;min-height:420px;padding:56px 20px 36px
-    }
-    .hero h1{
-      font-size:clamp(28px,5vw,44px);
-      line-height:1.1;margin-bottom:14px;color:#0f172a;font-weight:900
-    }
-    .hero p{color:var(--muted);max-width:52ch;margin-bottom:22px}
-    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
 
-    .btn{
-      display:inline-flex;align-items:center;justify-content:center;
-      padding:12px 18px;border-radius:12px;border:0;cursor:pointer;
-      font-weight:800;text-decoration:none;
-      box-shadow:0 8px 24px rgba(0,0,0,.06);
-      transition:transform .15s ease, box-shadow .15s ease, filter .15s ease;
-      user-select:none
+    .hero-inner {
+      display: grid; grid-template-columns: 1.1fr .9fr; gap: 28px;
+      align-items: center; min-height: 420px; padding: 56px 20px 36px;
     }
-    .btn:focus{outline:3px solid var(--ring);outline-offset:2px}
-    .btn-primary{
-      background:linear-gradient(135deg,var(--purple) 0%, #4b2da1 50%, var(--blue) 120%);
-      color:white
-    }
-    .btn-primary:hover{transform:translateY(-1px)}
-    .btn-ghost{background:#fff;color:var(--purple);border:1px solid #e8ebf5}
-    .btn-ghost:hover{box-shadow:0 8px 24px rgba(94,53,177,.15)}
 
-    /* Illustration placeholder */
-    .hero-art{
-      position:relative;background:#ffffff;border:1px solid #e8ebf5;border-radius:20px;
-      min-height:260px;
-      box-shadow:0 20px 50px rgba(94,53,177,.12), inset 0 0 0 1px #eef2ff;
-      display:grid;place-items:center;padding:14px
+    .hero h1 {
+      font-size: clamp(28px,5vw,44px);
+      line-height: 1.1; margin-bottom: 14px; color: #0f172a; font-weight: 900;
     }
-    .hero-art:before{
-      content:"Education illustration";color:#93a0b8;font-weight:700;letter-spacing:.4px
+    .hero p { color: var(--muted); max-width: 52ch; margin-bottom: 22px; }
+
+    .cta-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 12px 18px; border-radius: 12px; border: 0; cursor: pointer;
+      font-weight: 800; text-decoration: none;
+      box-shadow: 0 8px 24px rgba(0,0,0,.06);
+      transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+      user-select: none;
     }
-    .wave{
-      position:absolute;left:0;right:0;bottom:-1px;height:80px;pointer-events:none
+    .btn-primary {
+      background: linear-gradient(135deg,var(--purple) 0%, #4b2da1 50%, var(--blue) 120%);
+      color: white;
     }
-    .wave svg{display:block;width:100%;height:100%}
+    .btn-primary:hover { transform: translateY(-1px); }
+    .btn-ghost { background: #fff; color: var(--purple); border: 1px solid #e8ebf5; }
+    .btn-ghost:hover { box-shadow: 0 8px 24px rgba(94,53,177,.15); }
+
+    /* HERO IMAGE BOX */
+    .hero-art {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(94,53,177,.12), inset 0 0 0 1px #eef2ff;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-art img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      display: block;
+    }
 
     /* TOOLS */
-    .section{padding:48px 20px}
-    .grid{display:grid;grid-template-columns:repeat(12,1fr);gap:20px}
-    .card{
-      grid-column:span 4;background:var(--card);border-radius:18px;padding:22px;
-      border:1px solid #e8ebf5;
-      box-shadow:0 10px 28px rgba(0,0,0,.06)
+    .section { padding: 48px 20px; }
+    .grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 20px; }
+    .card {
+      grid-column: span 4;
+      background: var(--card);
+      border-radius: 18px;
+      padding: 22px;
+      border: 1px solid #e8ebf5;
+      box-shadow: 0 10px 28px rgba(0,0,0,.06);
     }
-    .card h3{color:var(--purple);font-size:20px;margin-bottom:6px}
-    .card p{color:var(--muted);margin-bottom:16px}
 
-    .download{display:inline-flex;gap:8px;align-items:center}
-    .download .dl{border-radius:10px;padding:10px 14px;font-weight:800;text-decoration:none}
-    .dl-live{background:var(--blue);color:#fff}
-    .dl-live:hover{filter:brightness(1.05)}
-    .dl-locked{
-      background:var(--locked);color:#eef2f9;cursor:not-allowed;pointer-events:none;
-      position:relative
+    .card h3 { color: var(--purple); font-size: 20px; margin-bottom: 6px; }
+    .card p { color: var(--muted); margin-bottom: 16px; }
+
+    .dl-live {
+      display: inline-block; background: var(--blue); color: #fff;
+      padding: 10px 14px; border-radius: 10px; font-weight: 800;
+      text-decoration: none;
     }
-    .dl-locked[data-tip]:hover:after{
-      content:attr(data-tip);
-      position:absolute;left:50%;transform:translateX(-50%);
-      bottom:calc(100% + 8px);white-space:nowrap;
-      background:#111827;color:#fff;font-weight:700;font-size:12px;
-      padding:6px 8px;border-radius:8px;box-shadow:0 8px 20px rgba(0,0,0,.18)
+    .dl-live:hover { filter: brightness(1.05); }
+
+    .dl-locked {
+      background: var(--locked); color: #eef2f9; cursor: not-allowed;
+      padding: 10px 14px; border-radius: 10px; font-weight: 800;
+      display: inline-block;
     }
 
     /* CONTACT */
-    .contact{
-      background:linear-gradient(135deg, rgba(94,53,177,.07), rgba(3,169,244,.07));
-      border-top:1px solid #e8ebf5;border-bottom:1px solid #e8ebf5
+    .contact {
+      background: linear-gradient(135deg, rgba(94,53,177,.07), rgba(3,169,244,.07));
+      border-top: 1px solid #e8ebf5;
+      border-bottom: 1px solid #e8ebf5;
     }
-    .form{
-      max-width:760px;margin:0 auto;background:#fff;border:1px solid #e8ebf5;border-radius:18px;
-      padding:24px;box-shadow:0 10px 28px rgba(0,0,0,.06)
+    .form {
+      max-width: 760px; margin: 0 auto; background: #fff;
+      border: 1px solid #e8ebf5; border-radius: 18px;
+      padding: 24px; box-shadow: 0 10px 28px rgba(0,0,0,.06);
     }
-    .form h2{color:#0f172a;font-size:22px;margin-bottom:8px}
-    .form p{color:var(--muted);margin-bottom:16px}
-    .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-    .row + .row{margin-top:12px}
-    .input, .textarea{
-      width:100%;border:1px solid #dbe3f3;border-radius:10px;padding:12px;
-      font-family:inherit;font-size:15px;transition:box-shadow .15s ease,border-color .15s ease
-    }
-    .textarea{min-height:120px;resize:vertical}
-    .input:focus,.textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px var(--ring)}
-    .form .actions{display:flex;gap:12px;justify-content:flex-end;margin-top:12px}
+    .form h2 { color: #0f172a; font-size: 22px; margin-bottom: 8px; }
+    .form p { color: var(--muted); margin-bottom: 16px; }
 
-    .toast{position:fixed;right:16px;bottom:16px;background:#0f172a;color:#fff;
-      padding:12px 14px;border-radius:12px;opacity:0;transform:translateY(6px);
-      pointer-events:none;transition:opacity .2s ease, transform .2s ease}
-    .toast.show{opacity:1;transform:translateY(0)}
-
-    /* FOOTER */
-    footer{padding:28px 20px;text-align:center;color:#8a93a6}
-
-    /* RESPONSIVE */
-    @media (max-width:900px){
-      .hero-inner{grid-template-columns:1fr;gap:20px}
+    .input, .textarea {
+      width: 100%; border: 1px solid #dbe3f3; border-radius: 10px;
+      padding: 12px; font-family: inherit; font-size: 15px;
+      transition: box-shadow .15s ease, border-color .15s ease;
+      margin-bottom: 12px;
     }
-    @media (max-width:860px){
-      .card{grid-column:span 6}
-      .row{grid-template-columns:1fr}
+    .textarea { min-height: 120px; resize: vertical; }
+    .input:focus, .textarea:focus {
+      outline: none; border-color: var(--blue);
+      box-shadow: 0 0 0 4px var(--ring);
     }
-    @media (max-width:560px){
-      .card{grid-column:span 12}
+    .actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 12px; }
+    .toast {
+      position: fixed; right: 16px; bottom: 16px; background: #0f172a; color: #fff;
+      padding: 12px 14px; border-radius: 12px; opacity: 0; transform: translateY(6px);
+      pointer-events: none; transition: opacity .2s ease, transform .2s ease;
+    }
+    .toast.show { opacity: 1; transform: translateY(0); }
+
+    footer { padding: 28px 20px; text-align: center; color: #8a93a6; }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 20px; }
+    }
+    @media (max-width: 860px) {
+      .card { grid-column: span 6; }
+    }
+    @media (max-width: 560px) {
+      .card { grid-column: span 12; }
     }
   </style>
 </head>
 <body>
-
-  <!-- NAV -->
   <nav class="nav">
     <div class="wrap nav-inner">
       <div class="brand"><span class="brand-icon"></span>Teaching Tools</div>
@@ -178,7 +191,6 @@
     </div>
   </nav>
 
-  <!-- HERO -->
   <header id="home" class="hero">
     <div class="wrap hero-inner">
       <div>
@@ -190,127 +202,80 @@
         </div>
       </div>
 
-      <!-- Replace this box with your illustration image if you want -->
-      <div class="hero-art" aria-label="Education illustration area"></div>
-    </div>
-
-    <!-- Subtle wave separator -->
-    <div class="wave" aria-hidden="true">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path fill="#ffffff" d="M0,64L60,69.3C120,75,240,85,360,90.7C480,96,600,96,720,80C840,64,960,32,1080,32C1200,32,1320,64,1380,80L1440,96L1440,120L0,120Z"></path>
-      </svg>
+      <!-- HERO IMAGE -->
+      <div class="hero-art">
+        <img src="41740277-c756-4039-985a-600a67c439a7.jpg" alt="Education themed illustration" />
+      </div>
     </div>
   </header>
 
-  <!-- TOOLS -->
   <section id="tools" class="section">
-    <div class="wrap">
-      <div class="grid">
-        <article class="card">
-          <h3>ESL Comment Generator — Lite</h3>
-          <p>Free, fast, and clean comments. Perfect for quick reports.</p>
-          <div class="download">
-            <a class="dl dl-live" href="ESL_Comment_Generator_Lite.exe" download>Download Lite</a>
-          </div>
-        </article>
+    <div class="wrap grid">
+      <article class="card">
+        <h3>ESL Comment Generator — Lite</h3>
+        <p>Free, fast, and clean comments. Perfect for quick reports.</p>
+        <a class="dl-live" href="ESL_Comment_Generator_Lite.exe" download>Download Lite</a>
+      </article>
 
-        <article class="card">
-          <h3>ESL Comment Generator — Pro</h3>
-          <p>Custom tone, length control, and richer phrasing options.</p>
-          <div class="download">
-            <span class="dl dl-locked" data-tip="Unavailable — coming soon">Coming Soon</span>
-          </div>
-        </article>
+      <article class="card">
+        <h3>ESL Comment Generator — Pro</h3>
+        <p>Custom tone, length control, and richer phrasing options.</p>
+        <span class="dl-locked">Coming Soon</span>
+      </article>
 
-        <article class="card">
-          <h3>Teacher Edition</h3>
-          <p>Classroom-ready version with extended logic and smart tools.</p>
-          <div class="download">
-            <span class="dl dl-locked" data-tip="Unavailable — coming soon">Coming Soon</span>
-          </div>
-        </article>
-      </div>
+      <article class="card">
+        <h3>Teacher Edition</h3>
+        <p>Classroom-ready version with extended logic and smart tools.</p>
+        <span class="dl-locked">Coming Soon</span>
+      </article>
     </div>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact" class="section contact">
-    <div class="wrap">
-      <div class="form" role="form" aria-labelledby="contactTitle">
-        <h2 id="contactTitle">Contact</h2>
-        <p>Questions or feedback? Send a quick message and it’ll open your email app with the details filled in.</p>
-        <div class="row">
-          <input class="input" id="name" type="text" placeholder="Your name" autocomplete="name" required>
-          <input class="input" id="email" type="email" placeholder="Your email" autocomplete="email" required>
-        </div>
-        <div class="row">
-          <textarea class="textarea" id="message" placeholder="Your message…" required></textarea>
-        </div>
-        <div class="actions">
-          <button class="btn btn-ghost" type="button" id="copyBtn">Copy message</button>
-          <button class="btn btn-primary" type="button" id="sendBtn">Send via Email</button>
-        </div>
+    <div class="wrap form">
+      <h2>Contact</h2>
+      <p>Questions or feedback? Send a quick message below.</p>
+      <input class="input" id="name" type="text" placeholder="Your name" required />
+      <input class="input" id="email" type="email" placeholder="Your email" required />
+      <textarea class="textarea" id="message" placeholder="Your message..." required></textarea>
+      <div class="actions">
+        <button class="btn btn-ghost" type="button" id="copyBtn">Copy message</button>
+        <button class="btn btn-primary" type="button" id="sendBtn">Send via Email</button>
       </div>
     </div>
   </section>
 
-  <footer>
-    © 2025 Teaching Tools. All rights reserved.
-  </footer>
+  <footer>© 2025 Teaching Tools. All rights reserved.</footer>
 
-  <div id="toast" class="toast" role="status" aria-live="polite">Copied to clipboard</div>
+  <div id="toast" class="toast">Copied to clipboard</div>
 
   <script>
-    // ====== CONTACT LOGIC (mailto + toast) ======
-    // Set this to your address:
-    const DESTINATION_EMAIL = "your-email@example.com"; // <-- replace with your real email
-
-    const $ = (id)=>document.getElementById(id);
+    const DESTINATION_EMAIL = "your-email@example.com"; // replace with your email
+    const $ = id => document.getElementById(id);
     const toast = $("toast");
 
     function showToast(msg){
       toast.textContent = msg;
       toast.classList.add("show");
       clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(()=>toast.classList.remove("show"), 1800);
+      window.__toastTimer = setTimeout(()=>toast.classList.remove("show"),1800);
     }
 
     function buildBody(){
-      const name = $("name").value.trim();
-      const email = $("email").value.trim();
-      const message = $("message").value.trim();
-      return `Name: ${name}\nEmail: ${email}\n\n${message}`;
+      return `Name: ${$("name").value}\nEmail: ${$("email").value}\n\n${$("message").value}`;
     }
 
     $("copyBtn").addEventListener("click", async ()=>{
-      try{
-        await navigator.clipboard.writeText(buildBody());
-        showToast("Message copied");
-      }catch(e){
-        showToast("Copy failed");
-      }
+      try{ await navigator.clipboard.writeText(buildBody()); showToast("Message copied"); }
+      catch(e){ showToast("Copy failed"); }
     });
 
     $("sendBtn").addEventListener("click", ()=>{
-      const subject = encodeURIComponent("Teaching Tools Inquiry");
-      const body = encodeURIComponent(buildBody());
-      const mailto = `mailto:${DESTINATION_EMAIL}?subject=${subject}&body=${body}`;
-      // Light validation
-      if(!$("name").value.trim() || !$("email").value.trim() || !$("message").value.trim()){
-        showToast("Please complete all fields");
-        return;
-      }
+      if(!$("name").value || !$("email").value || !$("message").value)
+        return showToast("Please complete all fields");
+      const mailto=`mailto:${DESTINATION_EMAIL}?subject=${encodeURIComponent("Teaching Tools Inquiry")}&body=${encodeURIComponent(buildBody())}`;
       showToast("Opening your email app…");
-      window.location.href = mailto;
-    });
-
-    // ====== Smooth scrolling for top nav ======
-    document.querySelectorAll('.nav a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        e.preventDefault();
-        const id = a.getAttribute('href').slice(1);
-        document.getElementById(id)?.scrollIntoView({behavior:"smooth", block:"start"});
-      });
+      window.location.href=mailto;
     });
   </script>
 </body>
