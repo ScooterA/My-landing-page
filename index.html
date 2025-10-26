@@ -14,302 +14,125 @@
 
     body {
       font-family: "Poppins", Arial, sans-serif;
-      background: #f9fafb;
+      background: linear-gradient(135deg, #f7f9fc, #e3eaf3);
       color: #333;
-      line-height: 1.6;
-      overflow-x: hidden;
+      min-height: 100vh;
     }
 
-    nav {
-      background: linear-gradient(135deg, #4db6ac, #81c784);
+    header {
+      background-color: #1e88e5;
       color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 15px 40px;
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
 
-    nav h1 {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 1.5rem;
+    header h1 {
+      font-size: 2.2rem;
       letter-spacing: 1px;
     }
 
-    nav h1 img {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
+    main {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
     }
 
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 25px;
-    }
-
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-      transition: opacity 0.3s;
-    }
-
-    nav ul li a:hover {
-      opacity: 0.8;
-    }
-
-    .hero {
-      background: url('https://cdn.pixabay.com/photo/2016/03/09/09/22/school-1247942_1280.jpg') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 120px 20px;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-    }
-
-    .hero h2 {
-      font-size: 2.8rem;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      max-width: 650px;
-      margin: 0 auto 30px auto;
-    }
-
-    .hero .btn {
+    .tool {
       background: white;
-      color: #388e3c;
-      padding: 12px 30px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s;
-    }
-
-    .hero .btn:hover {
-      background: #2e7d32;
-      color: white;
-    }
-
-    .features {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      padding: 60px 20px;
-      gap: 30px;
-      background: white;
-    }
-
-    .feature-card {
-      background: #f4fdf9;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-      width: 280px;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 2rem 1.5rem;
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .feature-card:hover {
-      transform: translateY(-5px);
+    .tool:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
-    .feature-card img {
-      width: 70px;
-      height: 70px;
-      margin-bottom: 15px;
+    .tool h2 {
+      color: #1e88e5;
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
     }
 
-    .feature-card h3 {
-      color: #2e7d32;
-      margin-bottom: 10px;
-    }
-
-    #download {
-      background: #ffffff;
-      text-align: center;
-      padding: 80px 20px;
-    }
-
-    #download h2 {
-      color: #2e7d32;
-      font-size: 2rem;
-      margin-bottom: 15px;
-    }
-
-    #download p {
-      max-width: 650px;
-      margin: 0 auto 30px;
-      font-size: 1.1rem;
-      color: #444;
-    }
-
-    #download button {
-      background: linear-gradient(135deg, #4db6ac, #81c784);
-      color: white;
-      border: none;
-      padding: 14px 40px;
-      border-radius: 25px;
-      font-weight: bold;
-      font-size: 1.1rem;
-      cursor: pointer;
-      transition: background 0.3s;
-      margin: 10px;
-    }
-
-    #download button:hover {
-      background: #2e7d32;
-    }
-
-    #download small {
-      display: block;
-      margin-top: 20px;
+    .tool p {
       font-size: 0.95rem;
-      color: #777;
+      margin-bottom: 1.5rem;
+      color: #555;
     }
 
-    .subscribe {
-      text-align: center;
-      background: linear-gradient(135deg, #4db6ac, #81c784);
+    .download-btn {
+      display: inline-block;
+      background-color: #1e88e5;
       color: white;
-      padding: 70px 20px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
     }
 
-    .subscribe h3 {
-      font-size: 1.8rem;
-      margin-bottom: 20px;
+    .download-btn:hover {
+      background-color: #1565c0;
     }
 
-    .subscribe input[type="email"] {
-      padding: 12px 15px;
-      border-radius: 25px;
-      border: none;
-      outline: none;
-      width: 250px;
-      margin-right: 10px;
-      font-size: 1rem;
-    }
-
-    .subscribe button {
-      background-color: white;
-      color: #388e3c;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .subscribe button:hover {
-      background-color: #2e7d32;
-      color: white;
+    /* Locked button style */
+    .download-btn.locked {
+      background-color: #b0bec5;
+      color: #f5f5f5;
+      cursor: not-allowed;
+      pointer-events: none;
+      box-shadow: none;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #2e7d32;
-      color: white;
+      padding: 2rem 1rem;
+      color: #777;
       font-size: 0.9rem;
     }
 
-    @media (max-width: 768px) {
-      .features {
-        flex-direction: column;
-        align-items: center;
-      }
-      .hero h2 {
-        font-size: 2rem;
-      }
-      nav {
-        flex-direction: column;
-        gap: 10px;
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
       }
     }
   </style>
 </head>
-
 <body>
-  <nav>
-    <h1>
-      <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="Logo" />
-      Teaching Tools
-    </h1>
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#download">Download</a></li>
-      <li><a href="#subscribe">Subscribe</a></li>
-    </ul>
-  </nav>
+  <header>
+    <h1>Teaching Tools by Scott Jeffery</h1>
+    <p>Your all-in-one toolkit for ESL teachers</p>
+  </header>
 
-  <section class="hero">
-    <h2>Empowering Teachers Everywhere</h2>
-    <p>Create smart comments, generate reports, and design tests effortlessly — all in one place.</p>
-    <a href="#download" class="btn">Try the Comment Generator</a>
-  </section>
+  <main>
+    <section class="tool">
+      <h2>ESL Comment Generator Lite</h2>
+      <p>A simple, free version for teachers who want quick, high-quality comments.</p>
+      <a class="download-btn" href="ESL_Comment_Generator_Lite.exe" download>Download Lite Version</a>
+    </section>
 
-  <section id="features" class="features">
-    <div class="feature-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/2921/2921222.png" alt="Smart Comments Icon">
-      <h3>Smart Comments</h3>
-      <p>Instantly generate personalized student comments that save hours of grading time.</p>
-    </div>
+    <section class="tool">
+      <h2>ESL Comment Generator Pro</h2>
+      <p>Advanced features with customizable tone, comment length, and teacher name options.</p>
+      <a class="download-btn locked">Coming Soon</a>
+    </section>
 
-    <div class="feature-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/3135/3135755.png" alt="Custom Tests Icon">
-      <h3>Custom Tests</h3>
-      <p>Create phonics and grammar tests tailored to each student's learning level.</p>
-    </div>
-
-    <div class="feature-card">
-      <img src="https://cdn-icons-png.flaticon.com/512/1828/1828884.png" alt="Reports Icon">
-      <h3>Reports & Feedback</h3>
-      <p>Generate detailed reports and meaningful feedback for parents and students.</p>
-    </div>
-  </section>
-
-  <!-- ✅ Download Section -->
-  <section id="download">
-    <h2>Download ESL Comment Generators</h2>
-    <p>Choose the version that fits your teaching needs best.</p>
-
-    <!-- Pro Version -->
-    <a href="https://raw.githubusercontent.com/ScooterA/My-landing-page/main/ESL_Comment_Generator_Teacher_Edition_Draft_8_Pro.exe" download>
-      <button>💼 ESL Comment Generator Pro</button>
-    </a>
-
-    <!-- Teacher Edition -->
-    <a href="https://raw.githubusercontent.com/ScooterA/My-landing-page/main/ESL_Comment_Generator_Teacher_Edition_Draft_4_Teacher_Edition.exe" download>
-      <button>🧑‍🏫 ESL Comment Generator Teacher Edition</button>
-    </a>
-
-    <!-- Lite Version -->
-    <a href="https://raw.githubusercontent.com/ScooterA/My-landing-page/main/ESL_Comment_Generator_Teacher_Edition_Lite_Version.exe" download>
-      <button>💻 ESL Comment Generator Lite (Free)</button>
-    </a>
-
-    <small>
-      ⚠️ Windows only. If you see a SmartScreen warning, click “More Info → Run Anyway”.
-    </small>
-  </section>
-
-  <section id="subscribe" class="subscribe">
-    <h3>Stay Updated</h3>
-    <p>Join our mailing list to get early access and updates on new tools.</p>
-    <form action="#" method="post">
-      <input type="email" name="email" placeholder="Enter your email" required />
-      <button type="submit">Subscribe</button>
-    </form>
-  </section>
+    <section class="tool">
+      <h2>Teacher Edition</h2>
+      <p>Professional classroom version with extended logic, smart clear button, and advanced phrasing.</p>
+      <a class="download-btn locked">Coming Soon</a>
+    </section>
+  </main>
 
   <footer>
-    © 2025 Teaching Tools — Empowering Educators
+    © 2025 Teaching Tools by Scott Jeffery. All rights reserved.
   </footer>
 </body>
 </html>
