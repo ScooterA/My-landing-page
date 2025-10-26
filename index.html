@@ -235,8 +235,16 @@
     <div class="wrap form">
       <h2>Contact</h2>
       <p>Questions or feedback? Send a quick message below.</p>
-      <input class="input" id="name" type="text" placeholder="Your name" required />
-      <input class="input" id="email" type="email" placeholder="Your email" required />
+     <form action="https://formspree.io/f/xeopojrr" method="POST" class="form">
+  <input class="input" type="text" name="name" placeholder="Your name" required>
+  <input class="input" type="email" name="email" placeholder="Your email" required>
+  <textarea class="textarea" name="message" placeholder="Your message..." required></textarea>
+  <div class="actions">
+    <button type="submit" class="btn btn-primary">Send Message</button>
+  </div>
+</form>
+
+     
       <textarea class="textarea" id="message" placeholder="Your message..." required></textarea>
       <div class="actions">
         <button class="btn btn-ghost" type="button" id="copyBtn">Copy message</button>
