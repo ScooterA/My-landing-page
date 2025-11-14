@@ -159,12 +159,6 @@
       box-shadow: 0 0 0 4px var(--ring);
     }
     .actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 12px; }
-    .toast {
-      position: fixed; right: 16px; bottom: 16px; background: #0f172a; color: #fff;
-      padding: 12px 14px; border-radius: 12px; opacity: 0; transform: translateY(6px);
-      pointer-events: none; transition: opacity .2s ease, transform .2s ease;
-    }
-    .toast.show { opacity: 1; transform: translateY(0); }
 
     footer { padding: 28px 20px; text-align: center; color: #8a93a6; }
 
@@ -195,7 +189,7 @@
     <div class="wrap hero-inner">
       <div>
         <h1>Simple tools for faster ESL feedback</h1>
-        <p>Create natural, useful student comments in seconds. Start with the free Lite version, and keep an eye on Pro and Teacher editions.</p>
+        <p>Create natural, teacher-like student comments in seconds. Start with the free Lite version — polished with Claude AI for authentic, flowing feedback.</p>
         <div class="cta-row">
           <a class="btn btn-primary" href="#tools">Explore Tools</a>
           <a class="btn btn-ghost" href="#contact">Contact</a>
@@ -213,78 +207,39 @@
     <div class="wrap grid">
       <article class="card">
         <h3>ESL Comment Generator — Lite</h3>
-        <p>Free, fast, and clean comments. Perfect for quick reports.</p>
+        <p>Free version with natural, flowing comments. Perfect for quick parent reports that sound genuinely teacher-written.</p>
         <a class="dl-live" href="ESL_Comment_Generator_Lite.exe" download>Download Lite</a>
       </article>
 
       <article class="card">
         <h3>ESL Comment Generator — Pro</h3>
-        <p>Custom tone, length control, and richer phrasing options.</p>
+        <p>Custom tone, length control, and richer phrasing options. Coming soon with even more flexibility.</p>
         <span class="dl-locked">Coming Soon</span>
       </article>
 
       <article class="card">
         <h3>Teacher Edition</h3>
-        <p>Classroom-ready version with extended logic and smart tools.</p>
+        <p>Classroom-ready version with extended logic and smart tools for comprehensive student feedback.</p>
         <span class="dl-locked">Coming Soon</span>
       </article>
     </div>
   </section>
 
   <section id="contact" class="section contact">
-    <div class="wrap form">
-      <h2>Contact</h2>
-      <p>Questions or feedback? Send a quick message below.</p>
-     <form action="https://formspree.io/f/xeopojrr" method="POST" class="form">
-  <input class="input" type="text" name="name" placeholder="Your name" required>
-  <input class="input" type="email" name="email" placeholder="Your email" required>
-  <textarea class="textarea" name="message" placeholder="Your message..." required></textarea>
-  <div class="actions">
-    <button type="submit" class="btn btn-primary">Send Message</button>
-  </div>
-</form>
-
-     
-      <textarea class="textarea" id="message" placeholder="Your message..." required></textarea>
-      <div class="actions">
-        <button class="btn btn-ghost" type="button" id="copyBtn">Copy message</button>
-        <button class="btn btn-primary" type="button" id="sendBtn">Send via Email</button>
-      </div>
+    <div class="wrap">
+      <form action="https://formspree.io/f/xeopojrr" method="POST" class="form">
+        <h2>Contact</h2>
+        <p>Questions or feedback? Send a quick message below.</p>
+        <input class="input" type="text" name="name" placeholder="Your name" required>
+        <input class="input" type="email" name="email" placeholder="Your email" required>
+        <textarea class="textarea" name="message" placeholder="Your message..." required></textarea>
+        <div class="actions">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+      </form>
     </div>
   </section>
 
   <footer>© 2025 Teaching Tools. All rights reserved.</footer>
-
-  <div id="toast" class="toast">Copied to clipboard</div>
-
-  <script>
-    const DESTINATION_EMAIL = "teachingtools69@gmail.com";
-    const $ = id => document.getElementById(id);
-    const toast = $("toast");
-
-    function showToast(msg){
-      toast.textContent = msg;
-      toast.classList.add("show");
-      clearTimeout(window.__toastTimer);
-      window.__toastTimer = setTimeout(()=>toast.classList.remove("show"),1800);
-    }
-
-    function buildBody(){
-      return `Name: ${$("name").value}\nEmail: ${$("email").value}\n\n${$("message").value}`;
-    }
-
-    $("copyBtn").addEventListener("click", async ()=>{
-      try{ await navigator.clipboard.writeText(buildBody()); showToast("Message copied"); }
-      catch(e){ showToast("Copy failed"); }
-    });
-
-    $("sendBtn").addEventListener("click", ()=>{
-      if(!$("name").value || !$("email").value || !$("message").value)
-        return showToast("Please complete all fields");
-      const mailto=`mailto:${DESTINATION_EMAIL}?subject=${encodeURIComponent("Teaching Tools Inquiry")}&body=${encodeURIComponent(buildBody())}`;
-      showToast("Opening your email app…");
-      window.location.href=mailto;
-    });
-  </script>
 </body>
 </html>
