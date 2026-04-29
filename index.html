@@ -26,7 +26,6 @@
       background: linear-gradient(180deg,#f9fbff 0%,#eef4ff 55%,#eaf2ff 100%);
     }
 
-    /* NAV */
     .nav {
       position: sticky; top: 0; z-index: 50;
       background: rgba(255,255,255,.85);
@@ -44,12 +43,9 @@
       display: inline-block;
     }
 
-    .nav a {
-      color: var(--ink); text-decoration: none; font-weight: 600; margin-left: 20px;
-    }
+    .nav a { color: var(--ink); text-decoration: none; font-weight: 600; margin-left: 20px; }
     .nav a:hover { color: var(--purple); }
 
-    /* HERO */
     .hero {
       position: relative; overflow: hidden;
       background: radial-gradient(1400px 500px at 75% -10%, rgba(94,53,177,.35), transparent 60%),
@@ -86,26 +82,18 @@
     .btn-ghost { background: #fff; color: var(--purple); border: 1px solid #e8ebf5; }
     .btn-ghost:hover { box-shadow: 0 8px 24px rgba(94,53,177,.15); }
 
-    /* HERO IMAGE BOX */
     .hero-art {
       background: white;
       border-radius: 20px;
       box-shadow: 0 20px 50px rgba(94,53,177,.12), inset 0 0 0 1px #eef2ff;
       overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      display: flex; align-items: center; justify-content: center;
     }
 
     .hero-art img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      border-radius: 20px;
-      display: block;
+      width: 100%; height: 100%; object-fit: cover; border-radius: 20px; display: block;
     }
 
-    /* TOOLS */
     .section { padding: 48px 20px; }
     .section-title { font-size: 22px; font-weight: 800; color: #0f172a; margin-bottom: 20px; }
     .grid { display: grid; grid-template-columns: repeat(12,1fr); gap: 20px; }
@@ -116,9 +104,7 @@
       padding: 22px;
       border: 1px solid #e8ebf5;
       box-shadow: 0 10px 28px rgba(0,0,0,.06);
-      display: flex;
-      flex-direction: column;
-      min-height: 280px;
+      display: flex; flex-direction: column; min-height: 280px;
     }
 
     .card h3 { color: var(--purple); font-size: 20px; margin-bottom: 6px; }
@@ -130,33 +116,29 @@
       margin-bottom: 10px; width: fit-content;
     }
     .tag-download { background: #eef6ff; color: var(--blue); }
+    .tag-free { background: #e8f5e9; color: #2e7d32; }
     .tag-webapp { background: #f0ebff; color: var(--purple); }
 
     .dl-live {
       display: inline-block; background: var(--blue); color: #fff;
-      padding: 10px 14px; border-radius: 10px; font-weight: 800;
-      text-decoration: none;
+      padding: 10px 14px; border-radius: 10px; font-weight: 800; text-decoration: none;
     }
     .dl-live:hover { filter: brightness(1.05); }
 
     .dl-webapp {
       display: inline-block; background: linear-gradient(135deg, var(--purple), #4b2da1);
-      color: #fff; padding: 10px 14px; border-radius: 10px; font-weight: 800;
-      text-decoration: none;
+      color: #fff; padding: 10px 14px; border-radius: 10px; font-weight: 800; text-decoration: none;
     }
     .dl-webapp:hover { filter: brightness(1.1); }
 
     .dl-locked {
       background: var(--locked); color: #eef2f9; cursor: not-allowed;
-      padding: 10px 14px; border-radius: 10px; font-weight: 800;
-      display: inline-block;
+      padding: 10px 14px; border-radius: 10px; font-weight: 800; display: inline-block;
     }
 
-    /* CONTACT */
     .contact {
       background: linear-gradient(135deg, rgba(94,53,177,.07), rgba(3,169,244,.07));
-      border-top: 1px solid #e8ebf5;
-      border-bottom: 1px solid #e8ebf5;
+      border-top: 1px solid #e8ebf5; border-bottom: 1px solid #e8ebf5;
     }
     .form {
       max-width: 760px; margin: 0 auto; background: #fff;
@@ -169,27 +151,19 @@
     .input, .textarea {
       width: 100%; border: 1px solid #dbe3f3; border-radius: 10px;
       padding: 12px; font-family: inherit; font-size: 15px;
-      transition: box-shadow .15s ease, border-color .15s ease;
-      margin-bottom: 12px;
+      transition: box-shadow .15s ease, border-color .15s ease; margin-bottom: 12px;
     }
     .textarea { min-height: 120px; resize: vertical; }
     .input:focus, .textarea:focus {
-      outline: none; border-color: var(--blue);
-      box-shadow: 0 0 0 4px var(--ring);
+      outline: none; border-color: var(--blue); box-shadow: 0 0 0 4px var(--ring);
     }
     .actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 12px; }
 
     footer { padding: 28px 20px; text-align: center; color: #8a93a6; }
 
-    @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 20px; }
-    }
-    @media (max-width: 860px) {
-      .card { grid-column: span 6; }
-    }
-    @media (max-width: 560px) {
-      .card { grid-column: span 12; }
-    }
+    @media (max-width: 900px) { .hero-inner { grid-template-columns: 1fr; gap: 20px; } }
+    @media (max-width: 860px) { .card { grid-column: span 6; } }
+    @media (max-width: 560px) { .card { grid-column: span 12; } }
   </style>
 </head>
 <body>
@@ -215,10 +189,8 @@
           <a class="btn btn-ghost" href="#contact">Contact</a>
         </div>
       </div>
-
-      <!-- HERO IMAGE -->
       <div class="hero-art">
-       <img src="vitaly-gariev-KOTQ96r2m6E-unsplash.jpg" alt="Education themed illustration" />
+        <img src="vitaly-gariev-KOTQ96r2m6E-unsplash.jpg" alt="Education themed illustration" />
       </div>
     </div>
   </header>
@@ -228,7 +200,7 @@
       <p class="section-title">Comment Generators</p>
       <div class="grid">
         <article class="card">
-          <span class="card-tag tag-download">Free Download</span>
+          <span class="card-tag tag-free">Free Download</span>
           <h3>ESL Comment Generator — Lite</h3>
           <p>Free version with natural, flowing comments. Perfect for quick parent reports that sound genuinely teacher-written.</p>
           <a class="dl-live" href="ESL_Comment_Generator_Lite.exe" download>Download Lite</a>
@@ -236,8 +208,8 @@
 
         <article class="card">
           <span class="card-tag tag-download">Download</span>
-          <h3>Teacher Edition</h3>
-          <p>Classroom-ready version with extended logic and smart tools for comprehensive student feedback.</p>
+          <h3>ESL Comment Generator — Teacher Edition</h3>
+          <p>Slider-based interface with 11 skills, tone control, behaviour issues, and grade levels 1–6. Ideal for detailed report writing.</p>
           <a class="dl-live" href="ESL_Comment_Generator_Teacher.exe" download>Download Teacher</a>
         </article>
 
@@ -259,14 +231,14 @@
           <span class="card-tag tag-webapp">Web App</span>
           <h3>Spelling Bee</h3>
           <p>Interactive spelling practice for all 6 grade levels. Students hear the word and type it using the on-screen keyboard. Includes Cambridge YLE word lists.</p>
-          <a class="dl-webapp" href="https://golden-unicorn-50aa2b.netlify.app" target="_blank" rel="noopener">Open App</a>
+          <a class="dl-webapp" href="https://scootera.github.io/Spelling-Bee" target="_blank" rel="noopener">Open App</a>
         </article>
 
         <article class="card">
           <span class="card-tag tag-webapp">Web App</span>
           <h3>Phonics Practice</h3>
           <p>Stage-by-stage phonics app covering CVC words through advanced patterns. Designed for young learners building foundational reading skills.</p>
-          <a class="dl-webapp" href="https://zingy-speculoos-cca8f8.netlify.app" target="_blank" rel="noopener">Open App</a>
+          <a class="dl-webapp" href="https://scootera.github.io/Phonics-" target="_blank" rel="noopener">Open App</a>
         </article>
       </div>
     </div>
